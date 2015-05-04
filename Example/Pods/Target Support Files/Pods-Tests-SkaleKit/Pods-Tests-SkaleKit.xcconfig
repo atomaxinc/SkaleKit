@@ -1,0 +1,2 @@
+PODS_TESTS_SKALEKIT_FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../../Frameworks"
+PODS_TESTS_SKALEKIT_OTHER_LDFLAGS = -framework "CoreBluetooth" -framework "SkaleKit" -framework "UIKit"

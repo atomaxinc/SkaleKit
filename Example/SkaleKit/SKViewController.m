@@ -7,9 +7,9 @@
 //
 
 #import "SKViewController.h"
-
-@interface SKViewController ()
-
+#import <SkaleKit/SkaleKit.h>
+@interface SKViewController () <SKSkaleDelegate>
+@property (nonatomic, strong) SKSkale *skale;
 @end
 
 @implementation SKViewController
@@ -18,6 +18,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.skale = [[SKSkale alloc] init];
+    
+    self.skale.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +29,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - SKSkaleDelegate
+
+- (void)skaleDidConnected:(SKSkale *)skale
+{
+    printf("\n did connected");
+}
+
+- (void)skaleDidDisconnected:(SKSkale *)skale
+{
+}
+
+- (void)skale:(SKSkale *)skale DidErrorOccur:(NSError *)error
+{
+}
+
+- (void)skaleWeightDidUpdate:(Float32)weight
+{
+    [self.weightLabel setText:[NSString stringWithFormat:@"%.1fg",weight]];
+}
+
 
 @end

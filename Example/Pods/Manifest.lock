@@ -1,0 +1,14 @@
+PODS:
+  - SkaleKit (0.1.0)
+
+DEPENDENCIES:
+  - SkaleKit (from `../`)
+
+EXTERNAL SOURCES:
+  SkaleKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SkaleKit: ee77f55f6670a54a120f7a99aff4f799f90be72c
+
+COCOAPODS: 0.35.0

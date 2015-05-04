@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SKViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *weightLabel;
 
 @end
