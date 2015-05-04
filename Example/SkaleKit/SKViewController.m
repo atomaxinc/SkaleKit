@@ -34,7 +34,6 @@
 
 - (void)skaleDidConnected:(SKSkale *)skale
 {
-    printf("\n did connected");
 }
 
 - (void)skaleDidDisconnected:(SKSkale *)skale
