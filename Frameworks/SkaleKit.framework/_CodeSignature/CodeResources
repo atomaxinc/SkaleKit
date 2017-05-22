@@ -14,11 +14,11 @@
 		</data>
 		<key>Headers/SkaleKit.h</key>
 		<data>
-		WOsi/6eATGz4rRmg+MZpAUznXHU=
+		GPohfFv3qi7uhw0vzfCcLcFFNhU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QjpD9kjLhpAovlKwETUwVUxO5Io=
+		t7pJpgxpV/05v9lRugxdgngPWSw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,11 +53,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WOsi/6eATGz4rRmg+MZpAUznXHU=
+			GPohfFv3qi7uhw0vzfCcLcFFNhU=
 			</data>
 			<key>hash2</key>
 			<data>
-			xdy0ErrRpTIyAN9fsWtmKKiGR4eTAoRvQvUnGEcHYDw=
+			H1toPufPIKY4v0+k3uT9n6lef7BSFWQTXDuA6O7O7Ug=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -89,6 +89,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -134,6 +139,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

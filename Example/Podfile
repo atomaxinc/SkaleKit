@@ -1,10 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'SkaleKit', :exclusive => true do
+target 'SkaleKit' do
   pod "SkaleKit", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
+target 'Tests' do
   pod "SkaleKit", :path => "../"
 
   

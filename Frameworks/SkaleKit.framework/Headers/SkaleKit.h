@@ -2,8 +2,8 @@
 //  SkaleKit.h
 //  SkaleKit
 //
-//  Created by Ryan on 2016/4/11.
-//  Copyright © 2016年 Atomax. All rights reserved.
+//  Created by Ryan on 2017/5/22.
+//  Copyright © 2017年 Atomax. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
