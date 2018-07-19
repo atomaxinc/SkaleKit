@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SkaleKit"
-  s.version          = "0.4.0"
+  s.version          = "0.4.1"
   s.summary          = "SkaleKit is a iOS api for accessing Skale electric scale."
   s.homepage         = "https://github.com/atomaxinc/SkaleKit"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
