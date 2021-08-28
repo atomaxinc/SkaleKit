@@ -80,6 +80,6 @@ typedef void (^BatteryCompletion)(NSUInteger value);
 - (void)readSkaleBatteryLifeWithCompletion:(BatteryCompletion)completion;
 - (void)disconnect;
 - (void)tare;
-
+- (void)setLEDDisplayOn:(BOOL)isOn;
 @end
 

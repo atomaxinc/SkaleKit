@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/SKSkale.h</key>
 		<data>
-		KzxUI9FSiJYZoWjNr/j18n3lN2Y=
+		gv9qkDnjNGqaiq63MCtpEghWk7I=
 		</data>
 		<key>Headers/SkaleKit.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		B/zseW3AaMCAd5TnPVMrJw7Xjsg=
+		kdM0QL7WBTcKE1lNAHgJ1OjFmPg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,11 +42,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KzxUI9FSiJYZoWjNr/j18n3lN2Y=
+			gv9qkDnjNGqaiq63MCtpEghWk7I=
 			</data>
 			<key>hash2</key>
 			<data>
-			hz6pC+PFzUf8i5jjwdMgmbhYOszWKYgaW2MlRtgjJ+E=
+			yqpwovceRZsOME4hVdplwQTQOFuhXyu8pg4YOhARgTo=
 			</data>
 		</dict>
 		<key>Headers/SkaleKit.h</key>
@@ -74,7 +74,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -105,24 +105,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -158,13 +146,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

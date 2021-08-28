@@ -84,7 +84,7 @@ SkaleKit is available under the MIT license. See the LICENSE file for more info.
 
 Created by Ryan Chen, engineer at Atomax, on 16/07/09.
 
-Copyright (c) 2016年 Atomax Inc. All rights reserved.
+Copyright (c) 2021年 Atomax Inc. All rights reserved.
 
 Any feedback is welcomed, please send feekback to 
 <service@atomaxinc.com> or [![facebook](http://www.atomaxinc.com/ref_images/facebook.png)](https://www.facebook.com/pages/Atomax/154955394547353)

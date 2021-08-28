@@ -39,6 +39,7 @@
 
 - (void)skaleDidDisconnected:(SKSkale *)skale
 {
+    printf("\n did disconnected");
 }
 
 - (void)skale:(SKSkale *)skale DidErrorOccur:(NSError *)error
