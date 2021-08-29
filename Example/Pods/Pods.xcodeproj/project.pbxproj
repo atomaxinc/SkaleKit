@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2F9C7F6ACD0FBA53D0FEAF6FD7C5D0BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		43BD02D5FF91CCCA63678D816E4E4854 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		635BC2EC800A44FD7FA0FE6D1FB6257D /* Pods-SkaleKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B93F7B19ED78D2E78D5704794A4552 /* Pods-SkaleKit-dummy.m */; };
+		94F9A1E826DB2B2F000A3BC7 /* SkaleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F9A1E726DB2B2F000A3BC7 /* SkaleKit.framework */; platformFilter = ios; };
 		FE7DF16878FE91AA7AE0070D6695CAD9 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 178AB3383F5367100120B841030F725A /* Pods-Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -35,17 +36,17 @@
 		3219B940EF7C69F5AAA66E049665E19A /* Pods-SkaleKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SkaleKit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		361D4051978A50921D0A393B5D91A5FE /* Pods-SkaleKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SkaleKit-acknowledgements.plist"; sourceTree = "<group>"; };
 		3CCB4812E34424AA99C02ECDAE35FADA /* ResourceBundle-SkaleKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SkaleKit-Info.plist"; sourceTree = "<group>"; };
-		51CBAF1D021B593ABFFDEBFF08E53879 /* SkaleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkaleKit.framework; path = Frameworks/SkaleKit.framework; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7569F4E212EF859E7368B4E0C072B6EF /* SkaleKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SkaleKit.bundle; path = SkaleKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7569F4E212EF859E7368B4E0C072B6EF /* SkaleKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkaleKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		75945C575BEB0FFF736224D0E9A3E257 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		79B93F7B19ED78D2E78D5704794A4552 /* Pods-SkaleKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SkaleKit-dummy.m"; sourceTree = "<group>"; };
 		7C4B7C8F7B096E10FC04FCB37E4E8A3A /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8695A6E39BD5E7364F67F6B35D85642B /* ResourceBundle-SkaleKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-SkaleKit-Info.plist"; path = "../SkaleKit-iOS7.1/ResourceBundle-SkaleKit-Info.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		971758A328EF0F2291E13263FBE4EDB4 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Tests.a"; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F9A1E726DB2B2F000A3BC7 /* SkaleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SkaleKit.framework; sourceTree = "<group>"; };
+		971758A328EF0F2291E13263FBE4EDB4 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA28C95A5913D9AA956C8FBE3F10D5D /* Pods-SkaleKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkaleKit.release.xcconfig"; sourceTree = "<group>"; };
-		9F3938C09EA5182C27E74F835F840763 /* libPods-SkaleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SkaleKit.a"; path = "libPods-SkaleKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3938C09EA5182C27E74F835F840763 /* libPods-SkaleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkaleKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15F7CB91D7430C60A3EC7471446859C /* Pods-SkaleKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkaleKit.debug.xcconfig"; sourceTree = "<group>"; };
 		B7B1C9B1716ED61B9984747E2F2D0B9E /* Pods-SkaleKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkaleKit-resources.sh"; sourceTree = "<group>"; };
 		E1B4B11471740027EA4C6B746184527A /* Pods-SkaleKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkaleKit-frameworks.sh"; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F9A1E826DB2B2F000A3BC7 /* SkaleKit.framework in Frameworks */,
 				2F9C7F6ACD0FBA53D0FEAF6FD7C5D0BC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +158,6 @@
 				9F3938C09EA5182C27E74F835F840763 /* libPods-SkaleKit.a */,
 				971758A328EF0F2291E13263FBE4EDB4 /* libPods-Tests.a */,
 				7569F4E212EF859E7368B4E0C072B6EF /* SkaleKit.bundle */,
-				7569F4E212EF859E7368B4E0C072B6EF /* SkaleKit.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,7 +190,7 @@
 		D3C996F6199C4B26217788D571DDAFEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				51CBAF1D021B593ABFFDEBFF08E53879 /* SkaleKit.framework */,
+				94F9A1E726DB2B2F000A3BC7 /* SkaleKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,6 +288,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
