@@ -1,6 +1,0 @@
-framework module SkaleKit {
-  umbrella header "SkaleKit.h"
-
-  export *
-  module * { export * }
-}

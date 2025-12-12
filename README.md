@@ -1,90 +1,175 @@
 # SkaleKit
 
-[![CI Status](http://img.shields.io/travis/Ryan/SkaleKit.svg?style=flat)](https://travis-ci.org/Ryan/SkaleKit)
-[![Version](https://img.shields.io/cocoapods/v/SkaleKit.svg?style=flat)](http://cocoapods.org/pods/SkaleKit)
-[![License](https://img.shields.io/cocoapods/l/SkaleKit.svg?style=flat)](http://cocoapods.org/pods/SkaleKit)
-[![Platform](https://img.shields.io/cocoapods/p/SkaleKit.svg?style=flat)](http://cocoapods.org/pods/SkaleKit)
+[![CocoaPods](https://img.shields.io/cocoapods/v/SkaleKit.svg)](https://cocoapods.org/pods/SkaleKit)
+[![Platform](https://img.shields.io/cocoapods/p/SkaleKit.svg)](https://cocoapods.org/pods/SkaleKit)
+[![License](https://img.shields.io/cocoapods/l/SkaleKit.svg)](https://cocoapods.org/pods/SkaleKit)
 
-## Usage
+SkaleKit is a Bluetooth Low Energy SDK for connecting to [Skale](https://www.skale.cc) scales on iOS.
 
-SkaleKit is a wrapper for accessing [**Skale**](https://www.skale.cc) [BuletoothLowEnergy](http://en.wikipedia.org/wiki/Bluetooth_low_energy) electric scale. We use [CoreBluetooth](https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/AboutCoreBluetooth/Introduction.html#//apple_ref/doc/uid/TP40013257) framework to access [**Skale**](https://www.skale.cc). Via SkaleKit, developers can easily read weight from physical scale and do what you want with that data. 
+## Features
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+- Real-time weight updates
+- Device picker UI with BLE scanning
+- Tare function
+- Battery status monitoring
+- Dark Mode support
+- Localization (English, 繁體中文, 简体中文, 日本語)
 
 ## Requirements
 
-* CoreBluetooth.framework
-
+- iOS 12.0+
+- Xcode 14.0+
+- Swift 5.0+
 
 ## Installation
 
-SkaleKit is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
+### CocoaPods
 
 ```ruby
-pod "SkaleKit"
+pod 'SkaleKit', '~> 1.0'
 ```
 
+### Swift Package Manager
 
-##Get Started
+```swift
+dependencies: [
+    .package(url: "https://github.com/atomaxinc/SkaleKit.git", from: "1.0.0")
+]
+```
 
-####Initialize
-Initialize the instance of SKSKale class.
+### Manual Installation
 
-<pre>
-SKSkale *skale = [[SKSkale alloc] init];
-</pre>
+1. Download `SkaleKit.xcframework` from the [Releases](https://github.com/atomaxinc/SkaleKit/releases) page
+2. Drag it into your Xcode project
+3. Ensure it's added to "Frameworks, Libraries, and Embedded Content" with "Embed & Sign"
 
+## Setup
 
-####Assign Delegate
+Add Bluetooth permissions to your `Info.plist`:
 
-<pre>skale.delegate = self;</pre>
+```xml
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>This app uses Bluetooth to connect to your Skale scale.</string>
+<key>NSBluetoothPeripheralUsageDescription</key>
+<string>This app uses Bluetooth to connect to your Skale scale.</string>
+```
 
+## Usage
 
-####Implement delegate methods
+### Swift
 
-<pre>
-- (void)skaleDidConnected:(SKSkale *)skale
-{
+```swift
+import SkaleKit
 
+class ViewController: UIViewController, SKSkaleDelegate {
+    let skale = SKSkale()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        skale.delegate = self
+    }
+
+    // Show device picker
+    func connectToScale() {
+        skale.showDevicePicker(onViewContoller: self) { error in
+            if let error = error {
+                print("Error: \(error)")
+            }
+        }
+    }
+
+    // Disconnect
+    func disconnect() {
+        skale.disconnect()
+    }
+
+    // MARK: - SKSkaleDelegate
+
+    func skaleDidConnected(_ skale: SKSkale!) {
+        print("Connected")
+    }
+
+    func skaleDidDisconnected(_ skale: SKSkale!) {
+        print("Disconnected")
+    }
+
+    func skaleWeightDidUpdate(_ weight: Float32) {
+        print("Weight: \(weight)g")
+    }
+
+    func skale(_ skale: SKSkale!, didErrorOccur error: Error!) {
+        print("Error: \(error)")
+    }
+}
+```
+
+### Objective-C
+
+```objc
+#import <SkaleKit/SkaleKit.h>
+
+@interface ViewController () <SKSkaleDelegate>
+@property (nonatomic, strong) SKSkale *skale;
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.skale = [[SKSkale alloc] init];
+    self.skale.delegate = self;
 }
 
-- (void)skaleDidDisconnected:(SKSkale *)skale
-{
+- (void)connectToScale {
+    [self.skale showDevicePickerOnViewContoller:self WithCompletion:^(NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }
+    }];
 }
 
-- (void)skale:(SKSkale *)skale DidErrorOccur:(NSError *)error
-{
+#pragma mark - SKSkaleDelegate
 
+- (void)skaleDidConnected:(SKSkale *)skale {
+    NSLog(@"Connected");
 }
 
-- (void)skaleWeightDidUpdate:(Float32)weight
-{
-
+- (void)skaleDidDisconnected:(SKSkale *)skale {
+    NSLog(@"Disconnected");
 }
 
-</pre>
+- (void)skaleWeightDidUpdate:(Float32)weight {
+    NSLog(@"Weight: %.1fg", weight);
+}
 
+@end
+```
 
-##Example
+## Example
 
-In SkaleKit project, we demostrate you a simple sample code to access the weight data. You will see how we get the data then display on the screen. 
+See the [Example](Example/) folder for a complete Swift demo app.
 
-## Author
+To run the example:
 
-Ryan, ryan@atomaxinc.com
+1. Open `Example/SkaleKitExample.xcodeproj`
+2. Build and run on a real device (BLE requires physical device)
+
+## Changelog
+
+### v1.0.0
+
+- Migrated to XCFramework (supports device + simulator)
+- Updated minimum iOS version to 12.0
+- New Swift example app with modern UI
+- Added Dark Mode support
+- Added localization (EN, zh-Hant, zh-Hans, JA)
 
 ## License
 
-SkaleKit is available under the MIT license. See the LICENSE file for more info.
+SkaleKit is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
+## Author
 
-##Additional Notes
+Atomax Inc. - support@atomaxinc.com
 
-Created by Ryan Chen, engineer at Atomax, on 16/07/09.
-
-Copyright (c) 2021年 Atomax Inc. All rights reserved.
-
-Any feedback is welcomed, please send feekback to 
-<service@atomaxinc.com> or [![facebook](http://www.atomaxinc.com/ref_images/facebook.png)](https://www.facebook.com/pages/Atomax/154955394547353)
+Any feedback is welcomed! Please send feedback to service@atomaxinc.com
