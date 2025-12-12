@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SkaleKit'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Bluetooth SDK for Skale coffee scales'
   s.description      = <<-DESC
     SkaleKit provides Bluetooth Low Energy connectivity for Skale coffee scales.
